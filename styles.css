@@ -1,0 +1,259 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Container for the Entire Page */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 4px solid #00aaff;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Blog Container */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Individual Blog Entry */
+.blog-entry {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    min-width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Title */
+.blog-entry h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #00aaff;
+    word-wrap: break-word;
+}
+
+.blog-entry p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Blog Image */
+.blog-entry img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Bulk Actions Styling */
+.bulk-actions {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.bulk-actions button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bulk-actions button:hover {
+    background-color: #0088cc;
+}
+
+/* Blog Privacy Form */
+.blog-privacy-form {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blog-privacy-form label {
+    font-weight: bold;
+}
+
+.blog-privacy-form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.blog-privacy-form button {
+    background-color: #00aaff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blog-privacy-form button:hover {
+    background-color: #0088cc;
+}
+
+/* Dashboard and Admin Dashboard Styling */
+.dashboard-section, .admin-dashboard {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Admin Table Styling */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+.admin-table th, .admin-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.admin-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.admin-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.admin-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+    border-top: 4px solid #00aaff;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Error and Success Messages */
+.message {
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.progress {
+    height: 20px;
+    background-color: #4caf50;
+    width: 0;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-entry {
+        width: calc(50% - 20px);
+    }
+
+    .admin-table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-entry {
+        width: 100%;
+    }
+
+    .sort-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sort-options select {
+        margin-bottom: 10px;
+    }
+
+    .dashboard-section {
+        margin: 10px;
+        padding: 10px;
+    }
+}
